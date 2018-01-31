@@ -13,8 +13,18 @@ import type { Store } from './types';
 import { StackNavigator } from 'react-navigation';
 
 const BasicApp = StackNavigator({
-  Main: { screen: App },
-  Profile: { screen: ProfileScreen }
+  Main: {
+    screen: App,
+    navigationOptions: {
+      title: 'Home'
+    }
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      title: 'Person'
+    }
+  }
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
